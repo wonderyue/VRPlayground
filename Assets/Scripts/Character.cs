@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,9 @@ public class Character : MonoBehaviour
     public float gravity = 10.0F;
     // private Vector3 moveDirection = Vector3.zero;
     CharacterController controller;
+
+
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
