@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class MenuDisplayController : MonoBehaviour
 {
-    private bool isShowing = false;
     private Canvas menu;
 
     void Start()
     {
         menu = GetComponent<Canvas>();
-        menu.enabled = isShowing;
+        menu.enabled = false;
     }
 
-    void Update()
+    public void Update()
     {
         if (Input.GetButton("Fire1"))
-            toggleMenu();
+        {
+            menu.enabled = true;
+        }
+            
     }
 
-    public void toggleMenu()
-    {
-        isShowing = !isShowing;
-        menu.enabled = isShowing;        
-    }
 }
