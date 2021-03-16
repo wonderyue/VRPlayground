@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class CubeInteractionController : CubeController
 {
-    private float rotateSpeed = 360.0F;
     private int mode = 0;
+
+    //rotate variable
+    private float rotateSpeed = 360.0F;
+
+    //move variable
     private float speed = 2.0F;
 
+    //color variables
     private bool color = false;
     private Renderer renderer;
     private Color ORIGIN_COLOR;
+
+    //Outline variable
+    Outline outline;
 
     void Start()
     {
         renderer = this.GetComponent<Renderer>();
         ORIGIN_COLOR = renderer.material.GetColor("_Color");
+        outline = this.GetComponent<Outline>();
+        // outline.enabled = true;  
     }
 
     void Update()
     {
+        //outline show when pointing the cube
+        outline.enabled = isPointEnter? true : false;
+
+        //read the game mode
         mode = MenuModeController.mode;
         if (mode == 1)
             rotate();
@@ -53,5 +67,4 @@ public class CubeInteractionController : CubeController
             renderer.material.SetColor("_Color", color? Color.red : ORIGIN_COLOR);
         }
     }
-
 }
