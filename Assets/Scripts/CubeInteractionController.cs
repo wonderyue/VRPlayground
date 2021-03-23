@@ -25,7 +25,6 @@ public class CubeInteractionController : CubeController
         renderer = this.GetComponent<Renderer>();
         ORIGIN_COLOR = renderer.material.GetColor("_Color");
         outline = this.GetComponent<Outline>();
-        // outline.enabled = true;  
     }
 
     void Update()
@@ -41,8 +40,8 @@ public class CubeInteractionController : CubeController
         else if (mode == 2)
             move();
         
-        else if (mode == 3)
-            changeColor();
+        // else if (mode == 3)
+        //     changeColor();
 
     }
 
@@ -58,11 +57,11 @@ public class CubeInteractionController : CubeController
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
-    void changeColor() 
+    //this method should be public and directly linked to the click event
+    public void changeColor() 
     {
-        if (isPointClick)
-        {
-            isPointClick = !isPointClick;
+        if (mode == 3)
+        {  
             color = !color;
             renderer.material.SetColor("_Color", color? Color.red : ORIGIN_COLOR);
         }

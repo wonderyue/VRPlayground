@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class CubeController : MonoBehaviour
 {
     protected bool isPointEnter = false;
     protected bool isPointDown = false;
-    protected bool isPointClick = false;
+    // protected bool isPointClick = false;
 
     public void PointEnter()
     {
@@ -28,9 +28,9 @@ public class CubeController : MonoBehaviour
         isPointDown = true;
     }
 
-    public void PointClick()
-    {
-        isPointClick = true;
-    }
+    // public void PointClick()
+    // {
+    //     isPointClick = true;        
+    // }
 
 }
