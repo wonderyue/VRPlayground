@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CubeInteractionController : CubeController
 {
-    private int mode = 0;
-
     //rotate variable
     private float rotateSpeed = 360.0F;
 
@@ -30,19 +28,20 @@ public class CubeInteractionController : CubeController
     void Update()
     {
         //outline show when pointing the cube
-        outline.enabled = isPointEnter? true : false;
+        outline.enabled = isPointEnter ? true : false;
 
         //read the game mode
-        mode = MenuModeController.mode;
-        if (mode == 1)
-            rotate();
-
-        else if (mode == 2)
-            move();
-        
-        // else if (mode == 3)
-        //     changeColor();
-
+        switch (MenuDisplayController.Mode)
+        {
+            case MenuDisplayController.MODE.ROTATE_MODE:
+                rotate();
+                break;
+            case MenuDisplayController.MODE.MOVE_MODE:
+                move();
+                break;
+            default:
+                break;
+        }
     }
 
     void rotate()
@@ -58,12 +57,12 @@ public class CubeInteractionController : CubeController
     }
 
     //this method should be public and directly linked to the click event
-    public void changeColor() 
+    public void changeColor()
     {
-        if (mode == 3)
-        {  
+        if (MenuDisplayController.Mode == MenuDisplayController.MODE.COLOR_MODE)
+        {
             color = !color;
-            renderer.material.SetColor("_Color", color? Color.red : ORIGIN_COLOR);
+            renderer.material.SetColor("_Color", color ? Color.red : ORIGIN_COLOR);
         }
     }
 }

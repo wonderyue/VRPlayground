@@ -767,7 +767,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 192003607}
-          m_MethodName: PointClick
+          m_MethodName: changeColor
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1164,7 +1164,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 266931570}
-          m_MethodName: PointClick
+          m_MethodName: changeColor
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1323,7 +1323,6 @@ GameObject:
   - component: {fileID: 308880140}
   - component: {fileID: 308880139}
   - component: {fileID: 308880142}
-  - component: {fileID: 308880143}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -1444,33 +1443,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 308880143}
-          m_MethodName: getMode
-          m_Mode: 1
+        - m_Target: {fileID: 35915002}
+          m_MethodName: OnBtnClick
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: exit
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &308880143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308880137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11e3562bd9ccae5580bc7438227c0db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &310395174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,7 +1589,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 310395176}
-          m_MethodName: PointClick
+          m_MethodName: changeColor
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1715,7 +1702,6 @@ GameObject:
   - component: {fileID: 357906679}
   - component: {fileID: 357906678}
   - component: {fileID: 357906682}
-  - component: {fileID: 357906681}
   m_Layer: 5
   m_Name: RotateBtn
   m_TagString: Untagged
@@ -1823,18 +1809,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357906676}
   m_CullTransparentMesh: 0
---- !u!114 &357906681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357906676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11e3562bd9ccae5580bc7438227c0db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &357906682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1848,19 +1822,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 357906681}
-          m_MethodName: getMode
-          m_Mode: 1
+        - m_Target: {fileID: 35915002}
+          m_MethodName: OnBtnClick
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: rotate
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &466267196
@@ -1875,9 +1849,7 @@ GameObject:
   - component: {fileID: 466267200}
   - component: {fileID: 466267199}
   - component: {fileID: 466267198}
-  - component: {fileID: 466267201}
   - component: {fileID: 466267203}
-  - component: {fileID: 466267202}
   m_Layer: 5
   m_Name: ColorBtn
   m_TagString: Untagged
@@ -1985,30 +1957,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466267196}
   m_CullTransparentMesh: 0
---- !u!114 &466267201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466267196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11e3562bd9ccae5580bc7438227c0db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &466267202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466267196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11e3562bd9ccae5580bc7438227c0db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &466267203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,19 +1970,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 466267201}
-          m_MethodName: getMode
-          m_Mode: 1
+        - m_Target: {fileID: 35915002}
+          m_MethodName: OnBtnClick
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: color
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1001 &475867606
@@ -2584,7 +2532,6 @@ GameObject:
   - component: {fileID: 824080256}
   - component: {fileID: 824080255}
   - component: {fileID: 824080254}
-  - component: {fileID: 824080257}
   - component: {fileID: 824080258}
   m_Layer: 5
   m_Name: ClearBtn
@@ -2693,18 +2640,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824080252}
   m_CullTransparentMesh: 0
---- !u!114 &824080257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824080252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11e3562bd9ccae5580bc7438227c0db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &824080258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2718,19 +2653,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 824080257}
-          m_MethodName: getMode
-          m_Mode: 1
+        - m_Target: {fileID: 35915002}
+          m_MethodName: OnBtnClick
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: clear
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1001 &835269768
@@ -3074,7 +3009,6 @@ GameObject:
   - component: {fileID: 902081410}
   - component: {fileID: 902081409}
   - component: {fileID: 902081408}
-  - component: {fileID: 902081412}
   - component: {fileID: 902081411}
   m_Layer: 5
   m_Name: MoveBtn
@@ -3196,33 +3130,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 902081412}
-          m_MethodName: getMode
-          m_Mode: 1
+        - m_Target: {fileID: 35915002}
+          m_MethodName: OnBtnClick
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: move
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &902081412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902081406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11e3562bd9ccae5580bc7438227c0db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &905310867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3886,7 +3808,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1303514200}
-          m_MethodName: PointClick
+          m_MethodName: changeColor
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

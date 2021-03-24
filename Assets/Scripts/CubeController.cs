@@ -6,7 +6,6 @@ public class CubeController : MonoBehaviour
 {
     protected bool isPointEnter = false;
     protected bool isPointDown = false;
-    // protected bool isPointClick = false;
 
     public void PointEnter()
     {
@@ -22,15 +21,9 @@ public class CubeController : MonoBehaviour
     {
         isPointDown = false;
     }
-    
+
     public void PointDown()
     {
         isPointDown = true;
     }
-
-    // public void PointClick()
-    // {
-    //     isPointClick = true;        
-    // }
-
 }
